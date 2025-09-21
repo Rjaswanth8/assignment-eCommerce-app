@@ -1,0 +1,203 @@
+/* Drawer Wrapper  */
+.notifications-drawer {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  transition: right 0.3s ease;
+  z-index: 2001;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.notifications-drawer.open {
+  right: 0; /* slide in */
+}
+
+/* Backdrop Overlay (only for mobile)  */
+.notifications-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.notifications-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*  Inner Panel  */
+.notifi {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 0px 16px 32px;
+}
+
+.notifi::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Dark / Light Themes */
+.notifi.dark {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.notifi.light {
+  background: #fff;
+  color: #000;
+}
+
+/*  Header  */
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18.5px 0 18.5px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 16px;
+  position: sticky;
+  top: 0;
+  background: inherit;
+  z-index: 10;
+}
+
+.notifications-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*  Section Wrapper  */
+.notifications-section {
+  margin-bottom: 32px;
+}
+
+.notifications-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.notifications-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notifications-section li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.notifications-section li:last-child {
+  border-bottom: none;
+}
+
+/*  Icons  */
+.noti-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: #e3f5ff;
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.noti-icon img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  Text Styles  */
+.notifications-section p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.notifications-section time {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #777);
+}
+
+/*  Contacts  */
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-item img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/*  Dark Mode Tweaks  */
+.notifi.dark .notifications-header {
+  border-bottom: 1px solid #333;
+}
+
+.notifi.dark .notifications-section li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.notifi.dark .noti-icon {
+  background-color: #333;
+}
+
+/*  Responsive Rules  */
+@media (min-width: 1080px) {
+  /* On desktop: always visible, no overlay */
+  .notifications-drawer {
+    right: 0 !important;
+    position: fixed;
+  }
+
+  .notifications-overlay {
+    display: none !important;
+  }
+
+  .close-btn {
+    display: none;
+  }
+}
