@@ -413,7 +413,8 @@
   }
 
   .metrics-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
 
   .metric-card {
@@ -456,9 +457,9 @@
 /* Small Desktop / Medium (800px - 1279px) */
 @media screen and (min-width: 800px) and (max-width: 1279px) {
   .chart-card {
-    width: 25%;
-    max-width: 322px;
-    min-width: 200px;
+    width: 100% !important;
+    /* max-width: 322px;
+    min-width: 200px; */
   }
 }
 
