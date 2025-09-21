@@ -348,6 +348,7 @@
   }
   .metrics-grid {
     grid-template-columns: 1fr;
+    width: 100% !important;
   }
   .chart-card {
     padding: 16px;
