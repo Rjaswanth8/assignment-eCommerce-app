@@ -387,6 +387,29 @@
     position: static;
     margin-top: 12px;
   }
+  .top-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .metrics-grid {
+    grid-gap: 16px;
+    display: flex;
+    gap: 16px;
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    width: 100%;
+  }
+  .main-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .top-products {
+    display: block;
+    overflow: auto;
+  }
 }
 
 /* Tablet (768px - 1023px) */

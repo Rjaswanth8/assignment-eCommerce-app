@@ -241,7 +241,7 @@ td {
   }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 767px) {
   .sidebar {
     position: fixed;
     left: -250px;
@@ -251,31 +251,9 @@ td {
     z-index: 1000;
     transition: left 0.3s ease;
   }
-  .top-products {
-    display: block;
-    overflow: auto;
-  }
+
   .sidebar.open {
     left: 0;
-  }
-  .top-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-  .metrics-grid {
-    grid-gap: 16px;
-    display: flex;
-    gap: 16px;
-
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-    width: 100%;
-  }
-  .main-content {
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 
