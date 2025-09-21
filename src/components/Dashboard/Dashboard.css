@@ -388,17 +388,17 @@
     margin-top: 12px;
   }
   .top-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
   }
   .metrics-grid {
     grid-gap: 16px;
-    display: flex;
+    display: flex !important;
     gap: 16px;
 
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
 
     width: 100%;
   }
@@ -407,8 +407,8 @@
     margin-right: 0;
   }
   .top-products {
-    display: block;
-    overflow: auto;
+    display: block !important;
+    overflow: auto !important;
   }
 }
 
