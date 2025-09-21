@@ -338,14 +338,21 @@
   }
 
   .top-grid {
-    grid-template-columns: 1fr;
-    justify-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
-
+  .top-products {
+    display: block !important;
+    overflow: auto !important;
+  }
   .metrics-grid {
     grid-template-columns: 1fr;
   }
-
+  .chart-card {
+    padding: 16px;
+    width: 100% !important;
+  }
   .metric-card {
     width: 100%;
   }
@@ -392,23 +399,10 @@
     flex-wrap: nowrap !important;
     align-items: center !important;
   }
-  .metrics-grid {
-    grid-gap: 16px;
-    display: flex !important;
-    gap: 16px;
 
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
-
-    width: 100%;
-  }
   .main-content {
     margin-left: 0;
     margin-right: 0;
-  }
-  .top-products {
-    display: block !important;
-    overflow: auto !important;
   }
 }
 
