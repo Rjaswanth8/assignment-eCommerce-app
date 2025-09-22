@@ -265,7 +265,7 @@ td {
 @media (min-width: 1280px) {
   .app {
     display: grid;
-    grid-template-columns: 0.5fr 3.1fr 1fr;
+    grid-template-columns: 0.5fr 3.3fr 1fr;
   }
   .main-content {
     margin-right: 0px;

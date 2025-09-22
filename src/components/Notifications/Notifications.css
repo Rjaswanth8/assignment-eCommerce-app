@@ -3,7 +3,8 @@
   position: fixed;
   top: 0;
   right: -350px;
-  width: 320px;
+  /* width: 320px; */
+  width: 20%;
   height: 100vh;
   background: #fff;
   transition: right 0.3s ease;
@@ -17,7 +18,7 @@
   right: 0; /* slide in */
 }
 
-/* Backdrop Overlay (only for mobile)  */
+/* Backdrop Overlay (only for mobile)*/
 .notifications-overlay {
   position: fixed;
   top: 0;
