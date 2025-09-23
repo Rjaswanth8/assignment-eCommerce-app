@@ -204,3 +204,8 @@
     left: 0;
   }
 }
+@media (min-width: 1080px) {
+  .sidebar-close {
+    display: none;
+  }
+}
