@@ -202,3 +202,8 @@
     display: none;
   }
 }
+@media (max-width: 1080px) {
+  .notifications-drawer {
+    width: 320px;
+  }
+}
